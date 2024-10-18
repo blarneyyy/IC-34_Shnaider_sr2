@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Самостійна робота №2</title>
+    <link rel="icon" href="sr_pic.jpg" type="image/jpg"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+      /* Це однорядковий коментар */
+
+      /* Це багаторядковий
+      коментар */
+
+      /*p {
+        color: red;
+        text-align: center;
+      }*/
+
+      #para1 {
+        text-align: center;
+        color: pink;
+      }
+
+      p.center {
+        text-align: center;
+        color: blue;
+      }
+
+      p.large {
+        font-size: 180%;
+      }
+      * {
+        font-family: Arial, sans-serif; /* Додано шрифт Arial */
+      }
+      h5, h6 {
+        text-align: center;
+        color: green;
+      }
+      body {
+        background-color: rgb(247, 244, 242); /* те саме, що #ffcc99 */
+      }
+      div {
+        background-color: green;
+      }
+      div.first {
+        opacity: 0.1;
+      }
+      div.second {
+        opacity: 0.3;
+      }
+      div.third {
+        opacity: 0.6;
+      }
+
+      p.dotted {border-style: dotted;}
+      p.dashed {border-style: dashed;}
+      p.solid {border-style: solid;}
+      p.double {border-style: double;}
+      p.groove {border-style: groove;}
+      p.ridge {border-style: ridge;}
+      p.inset {border-style: inset;}
+      p.outset {border-style: outset;}
+      p.none {border-style: none;}
+      p.hidden {border-style: hidden;}
+      p.mix {border-style: dotted dashed solid double;}
+
+      p.one {
+        border-style: solid;
+        border-width: 5px 20px; /* 5 пикселів зверху і знизу, 20 пікселів по бокам */
+      }
+      p.two {
+        border-style: solid;
+        border-color: green;
+      }
+      p.three {
+        border-style: solid;
+        border-color: red green blue yellow; 
+      }
+      p.four {
+        border-top-style: dotted;
+        border-right-style: solid;
+        border-bottom-style: dotted;
+        border-left-style: solid;
+      }
+      p.five {
+        border-left: 6px solid red;
+        background-color: lightgrey;
+      }
+      p.normal {
+        border: 2px solid red;
+      }
+      p.round1 {
+        border: 2px solid red;
+        border-radius: 5px;
+      }
+      p.round2 {
+        border: 2px solid red;
+        border-radius: 8px;
+      }
+      p.round3 {
+        border: 2px solid red;
+        border-radius: 12px;
+      }
+      div.one {
+        border: 1px solid black;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 150px;
+        margin-left: 80px;
+        background-color: lightblue;
+      }
+
+      div.ex1 {
+        width: 300px;
+        background-color: yellow;
+      }
+      div.ex2 {
+        width: 300px;
+        padding: 25px;
+        box-sizing: border-box;
+        background-color: lightblue;
+      }
+
+      div.two {
+        max-width: 500px;
+        height: 100px;
+        background-color: powderblue;
+      }
+
+      div.three {
+        background-color: lightgrey;
+        width: 300px;
+        border: 15px solid green;
+        padding: 50px;
+        margin: 20px;
+      }
+
+      a.one:link {color:#ff0000;}
+      a.one:visited {color:#0000ff;}
+      a.one:hover {color:#ffcc00;}
+
+      a.two:link {color:#ff0000;}
+      a.two:visited {color:#0000ff;}
+      a.two:hover {font-size:150%;}
+
+      a.three:link {color:#ff0000;}
+      a.three:visited {color:#0000ff;}
+      a.three:hover {background:#66ff66;}
+
+      a.four:link {color:#ff0000;}
+      a.four:visited {color:#0000ff;}
+      a.four:hover {font-family:monospace;}
+
+      a.five:link {color:#ff0000;text-decoration:none;}
+      a.five:visited {color:#0000ff;text-decoration:none;}
+      a.five:hover {text-decoration:underline;}
+
+      ol {
+        background: #ff9999;
+        padding: 20px;
+      }
+      ul {
+        background: #3399ff;
+        padding: 20px;
+      }
+      ol li {
+        background: #ffe5e5;
+        padding: 5px;
+        margin-left: 35px;
+      }
+      ul li {
+        background: #cce5ff;
+        margin: 5px;
+      }
+
+
+      table.hover-table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      .hover-table th, .hover-table td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .hover-table tr:hover {background-color: #f5f5f5;}
+
+      table.zebra-table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      .zebra-table th, .zebra-table td {
+        text-align: left;
+        padding: 8px;
+      }
+
+      .zebra-table tr:nth-child(even) {background-color: #d1a9a9;}
+
+      table.colored-header-table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      .colored-header-table th, .colored-header-table td {
+        text-align: left;
+        padding: 8px;
+      }
+
+      .colored-header-table tr:nth-child(even) {background-color: #f2f2f2;}
+
+      .colored-header-table th {
+        background-color: #86aa88;
+        color: white;
+      }
+
+      table.responsive-table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      .responsive-table th, .responsive-table td {
+        text-align: left;
+        padding: 8px;
+      }
+
+      .responsive-table tr:nth-child(even) {background-color: #f2f2f2;}
+
+      div.table-container {
+        overflow-x: auto;
+      }
+
+      div.shadowbox {
+        width: 300px;
+        height: 100px;
+        padding: 15px;
+        background-color: coral;
+        box-shadow: 10px 10px 5px 12px lightblue;
+      }
+
+      #rcorners1 {
+        border-radius: 25px;
+        background: #73AD21;
+        padding: 20px; 
+        width: 200px;
+        height: 150px;  
+      }
+
+      #rcorners2 {
+        border-radius: 25px;
+        border: 2px solid #73AD21;
+        padding: 20px; 
+        width: 200px;
+        height: 150px;  
+      }
+
+      #rcorners3 {
+        border-radius: 25px;
+        background: url(sr_pic.jpg);
+        background-position: left top;
+        background-repeat: repeat;
+        padding: 20px; 
+        width: 200px;
+        height: 150px;  
+      }
+
+      #rcorners4 {
+        border-radius: 15px 50px 30px 5px;
+        background: #73AD21;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+      }
+
+      #rcorners5 {
+        border-radius: 15px 50px 30px;
+        background: #73AD21;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+      }
+
+      #rcorners6 {
+        border-radius: 15px 50px;
+        background: #73AD21;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+      }
+
+      #rcorners7 {
+        border-radius: 15px;
+        background: #73AD21;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+      }
+
+      #rcorners8 {
+        border-radius: 50px / 15px;
+        background: #73AD21;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+      }
+
+      #rcorners9 {
+        border-radius: 15px / 50px;
+        background: #73AD21;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+      }
+
+      #rcorners10 {
+        border-radius: 50%;
+        background: #73AD21;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+      }
+
+      div.anim {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-direction: reverse;
+      }
+
+      @keyframes example {
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:yellow; left:200px; top:0px;}
+        50%  {background-color:blue; left:200px; top:200px;}
+        75%  {background-color:green; left:0px; top:200px;}
+        100% {background-color:red; left:0px; top:0px;}
+      }
+
+      .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      .button2 {background-color: #008CBA; font-size: 20px;} /* Синяя */
+      .button3 {background-color: #9c1b24; border-radius: 12px;} /* Красная */
+      .button4 {background-color: #e7e7e7; color: black;} /* Серая */
+      .button5 {background-color: #0a0606; padding: 32px 16px;} /* Черная */
+      .button6 {
+        background-color: white;
+        color: black;
+        border: 2px solid #555555;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .pagination {
+        display: inline-block;
+      }
+
+      .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+        border: 1px solid #ddd;
+        margin: 0 4px;
+      }
+
+      .pagination a.active {
+        color: white;
+        border: 1px solid #372a67;
+      }
+
+      .pagination a:hover:not(.active) {background-color: #ddd;}
+
+      .newspaper {
+        column-count: 3;
+        column-width: 100px;
+      }
+
+      .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {background-color: #f1f1f1}
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+      }
+
+      h1 {
+        color: coral;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      }
+
+      div.pere {
+        width: 100px;
+        height: 100px;
+        background: red;
+        transition: width 2s, height 4s;
+      }
+
+      div.pere:hover {
+        width: 300px;
+        height: 300px;
+      }
+
+      p.test1 {
+        writing-mode: horizontal-tb; 
+      }
+
+      span.test2 {
+        writing-mode: vertical-rl; 
+      }
+
+      p.test2 {
+        writing-mode: vertical-rl; 
+      }
+    </style>
+</head>
+
+<header>
+  <h1>Cамостійна робота №2</h1>
+</header>
+<br>
+
+<body>
+  <h2>Cинтаксис </h2>
+  <p>Треба розкоментувати стиль, щоб усі параграфи стали червоними.</p>
+
+  <h2>Cелектори </h2>
+
+  <h3>CSS селектор id </h3>
+  <p id="para1">Це стилізований параграф.</p>
+  <p>Це не стилізований параграф.</p>
+
+  <h3>CSS селектор class</h3>
+  
+  <h4 class="center">Цей заголовок не буде змінено.</h4>
+  <p class="center">Цей параграф буде синім і вирівняним по центру.</p>
+  <p class="center large">Цей параграф буде синім, вирівняним по центру і з великим шрифтом.</p>
+  
+  <h3>Універсальний CSS селектор</h3>
+  <p>Універсальний селектор (*) встановив шрифт.</p>
+
+  <h3>CSS селектор групування</h3>
+  <h5>Цей заголовок згрупований з наступним.</h5>
+  <h6>Вони обидва будуть вирівняними по центру та зеленого кольору.</h6>
+
+  <h2>Кольори </h2>
+  <h3>CSS Назви кольорів</h3>
+  <p style="background-color:Tomato;">Tomato</p>
+  <p style="background-color:Orange;">Orange</p>
+  <p style="background-color:DodgerBlue;">DodgerBlue</p>
+  <p style="background-color:MediumSeaGreen;">MediumSeaGreen</p>
+  <p style="background-color:Gray;">Gray</p>
+  <p style="background-color:SlateBlue;">SlateBlue</p>
+  <p style="background-color:Violet;">Violet</p>
+  <p style="background-color:LightGray;">LightGray</p>
+
+  <h3>CSS Колір фону</h3>
+  <p style="background-color:Violet;">
+    Для цього параграфу встановлений фіолетовий колір фону.
+  </p>
+  
+  <h3>CSS Колір тексту</h3>
+  <p style="color:Tomato;">Цей параграф кольору Tomato.</p>
+
+  <h3>CSS Колір межі</h3>
+  <p style="border: 2px solid DodgerBlue;">Цей параграф знаходиться в межі.</p>
+
+  <h3>CSS Значення кольору</h3>
+  <p>Кольори такі ж як Tomato:</p>
+
+  <p style="background-color:rgb(255, 99, 71);">rgb(255, 99, 71)</p>
+  <p style="background-color:#ff6347;">#ff6347</p>
+  <p style="background-color:hsl(9, 100%, 64%);">hsl(9, 100%, 64%)</p>
+  
+  <p>Кольори такі ж як "Tomato", але на 50% прозоріші:</p>
+  <p style="background-color:rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</p>
+  <p style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5)</p>
+
+  <h3>RGB Значення</h3>
+  <p style="background-color:rgb(255, 0, 0);">rgb(255, 0, 0)</p>
+  <p style="background-color:rgb(0, 0, 255);">rgb(0, 0, 255)</p>
+  <p style="background-color:rgb(60, 179, 113);">rgb(60, 179, 113)</p>
+  <p style="background-color:rgb(238, 130, 238);">rgb(238, 130, 238)</p>
+  <p style="background-color:rgb(255, 165, 0);">rgb(255, 165, 0)</p>
+  <p style="background-color:rgb(106, 90, 205);">rgb(106, 90, 205)</p>
+
+  <p style="background-color:rgb(0, 0, 0);">rgb(0, 0, 0)</p>
+  <p style="background-color:rgb(60, 60, 60);">rgb(60, 60, 60)</p>
+  <p style="background-color:rgb(120, 120, 120);">rgb(120, 120, 120)</p>
+  <p style="background-color:rgb(180, 180, 180);">rgb(180, 180, 180)</p>
+  <p style="background-color:rgb(240, 240, 240);">rgb(240, 240, 240)</p>
+  <p style="background-color:rgb(255, 255, 255);">rgb(255, 255, 255)</p>
+
+  <h3>RGBA Значення</h3>
+  <p style="background-color:rgba(255, 99, 71, 0);">rgba(255, 99, 71, 0)</p>
+  <p style="background-color:rgba(255, 99, 71, 0.2);">rgba(255, 99, 71, 0.2)</p>
+  <p style="background-color:rgba(255, 99, 71, 0.4);">rgba(255, 99, 71, 0.4)</p>
+  <p style="background-color:rgba(255, 99, 71, 0.6);">rgba(255, 99, 71, 0.6)</p>
+  <p style="background-color:rgba(255, 99, 71, 0.8);">rgba(255, 99, 71, 0.8)</p>
+  <p style="background-color:rgba(255, 99, 71, 1);">rgba(255, 99, 71, 1)</p>
+
+  <h3>HEX Значення</h3>
+  <P style="background-color:#ff0000;">#ff0000</P>
+  <P style="background-color:#0000ff;">#0000ff</P>
+  <P style="background-color:#3cb371;">#3cb371</P>
+  <P style="background-color:#ee82ee;">#ee82ee</P>
+  <P style="background-color:#ffa500;">#ffa500</P>
+  <P style="background-color:#6a5acd;">#6a5acd</P>
+
+  <p style="background-color:#000000;">#000000</p>
+  <p style="background-color:#3c3c3c;">#3c3c3c</p>
+  <p style="background-color:#787878;">#787878</p>
+  <p style="background-color:#b4b4b4;">#b4b4b4</p>
+  <p style="background-color:#f0f0f0;">#f0f0f0</p>
+  <p style="background-color:#ffffff;">#ffffff</p>
+
+  <h3>HSL Значення</h3>
+  <P style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</P>
+  <P style="background-color:hsl(240, 100%, 50%);">hsl(240, 100%, 50%)</P>
+  <P style="background-color:hsl(147, 50%, 47%);">hsl(147, 50%, 47%)</P>
+  <P style="background-color:hsl(300, 76%, 72%);">hsl(300, 76%, 72%)</P>
+  <P style="background-color:hsl(39, 100%, 50%);">hsl(39, 100%, 50%)</P>
+  <P style="background-color:hsl(248, 53%, 58%);">hsl(248, 53%, 58%)</P>
+
+  <P style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</P>
+  <P style="background-color:hsl(0, 80%, 50%);">hsl(0, 80%, 50%)</P>
+  <P style="background-color:hsl(0, 60%, 50%);">hsl(0, 60%, 50%)</P>
+  <P style="background-color:hsl(0, 40%, 50%);">hsl(0, 40%, 50%)</P>
+  <P style="background-color:hsl(0, 20%, 50%);">hsl(0, 20%, 50%)</P>
+  <P style="background-color:hsl(0, 0%, 50%);">hsl(0, 0%, 50%)</P>
+
+  <h3>HSLA Значення</h3>
+  <p style="background-color:hsla(9, 100%, 64%, 0);">hsla(9, 100%, 64%, 0)</p>
+  <p style="background-color:hsla(9, 100%, 64%, 0.2);">hsla(9, 100%, 64%, 0.2)</p>
+  <p style="background-color:hsla(9, 100%, 64%, 0.4);">hsla(9, 100%, 64%, 0.4)</p>
+  <p style="background-color:hsla(9, 100%, 64%, 0.6);">hsla(9, 100%, 64%, 0.6)</p>
+  <p style="background-color:hsla(9, 100%, 64%, 0.8);">hsla(9, 100%, 64%, 0.8)</p>
+  <p style="background-color:hsla(9, 100%, 64%, 1);">hsla(9, 100%, 64%, 1)</p>
+
+  <h2>CSS Фони</h2>
+  <div class="first">
+    <p>opacity 0.1</p>
+  </div>
+  <div class="second">
+    <p>opacity 0.3</p>
+  </div>
+  <div class="third">
+    <p>opacity 0.6</p>
+  </div>
+  <div>
+    <p>opacity 1</p>
+  </div>
+
+  <h2>CSS Межі</h2>
+  <p class="dotted">Крапкова межа.</p>
+  <p class="dashed">Пунктирна межа.</p>
+  <p class="solid">Суцільні межа.</p>
+  <p class="double">Подвійна межа.</p>
+  <p class="groove">Рифлена межа.</p>
+  <p class="ridge">Ребриста межа.</p>
+  <p class="inset">Вставна межа.</p>
+  <p class="outset">Выпукла межа.</p>
+  <p class="none">Немає межі.</p>
+  <p class="hidden">Прихована межа.</p>
+  <p class="mix">Змішана межа.</p>
+
+  <h3>CSS Ширина межі</h3>
+  <p class="one">Параграф має встановлені межі.</p>
+
+  <h3>CSS Колір межі</h3>
+  <p class="two">Суцільна зелена межа.</p>
+  <p class="three">Суцільна кольорова межа.</p>
+
+  <h3>Окремі сторони</h3>
+  <p class="four">2 різних стилі границі.</p>
+
+  <h3>СSS Border</h3>
+  <p class="five">Властивість border-left.</p>
+
+  <h3>CSS Закруглені межі</h3>
+  <p class="normal">Звичайна межа.</p>
+  <p class="round1">Закруглена межа.</p>
+  <p class="round2">Більш закруглена межа.</p>
+  <p class="round3">Ще більш закруглена межа.</p>
+  
+  <h2>CSS Поля</h2>
+  <h3>Margin</h3>
+  <div class="one">Цей елемент div має верхнє поле 100px, праве поле 150px, нижнє поле 100px і ліве поле 80px.</div>
+
+  <h2>CSS Padding - Внутрішній відступ</h2>
+  <div class="ex1">Цей div має ширину 300 пікселів.</div>
+  <br>
+  <div class="ex2">Ширина цього div є 300 пікселів, не зважаючи на 50 пікселів спільного лівого і правого відступа, через властивості box-sizing: border-box.</div>
+  
+  <h2> CSS Висота/ширина</h2>
+  <div class="two"> </div>
+
+  <h2> CSS Блочна модель</h2>
+  <div class="three"> Демонстрація блочної системи.</div>
+
+  <h2> CSS Іконка</h2>
+  <i class="glyphicon glyphicon-cloud"></i>
+  <i class="glyphicon glyphicon-remove"></i>
+  <i class="glyphicon glyphicon-user"></i>
+  <i class="glyphicon glyphicon-envelope"></i>
+  <br>
+  <i class="material-icons">cloud</i>
+  <i class="material-icons">favorite</i>
+  <i class="material-icons">attachment</i>
+  <i class="material-icons">computer</i>
+  <i class="material-icons">traffic</i>
+
+  <h2> CSS Посилання</h2>
+
+  <p><b><a class="one" href="default.asp" target="_blank">Посилання змінює колір.</a></b></p>
+  <p><b><a class="two" href="default.asp" target="_blank">Посилання змінює розмір шрифта.</a></b></p>
+  <p><b><a class="three" href="default.asp" target="_blank">Посилання змінює фон.</a></b></p>
+  <p><b><a class="four" href="default.asp" target="_blank">Посилання змінює шрифт.</a></b></p>
+  <p><b><a class="five" href="default.asp" target="_blank">Посилання змінює оформлення тексту.</a></b></p>
+
+  <span style="cursor:auto">auto</span><br>
+  <span style="cursor:crosshair">crosshair</span><br>
+  <span style="cursor:default">default</span><br>
+  <span style="cursor:e-resize">e-resize</span><br>
+  <span style="cursor:help">help</span><br>
+  <span style="cursor:move">move</span><br>
+  <span style="cursor:n-resize">n-resize</span><br>
+  <span style="cursor:ne-resize">ne-resize</span><br>
+  <span style="cursor:nw-resize">nw-resize</span><br>
+  <span style="cursor:pointer">pointer</span><br>
+  <span style="cursor:progress">progress</span><br>
+  <span style="cursor:s-resize">s-resize</span><br>
+  <span style="cursor:se-resize">se-resize</span><br>
+  <span style="cursor:sw-resize">sw-resize</span><br>
+  <span style="cursor:text">text</span><br>
+  <span style="cursor:w-resize">w-resize</span><br>
+  <span style="cursor:wait">wait</span><br>
+
+  <h2> CSS Списки</h2>
+  <h3>Стилізація списків кольорами:</h3>
+  <ol>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coca Cola</li>
+  </ol>
+
+  <ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coca Cola</li>
+  </ul>
+
+  <h2> CSS Таблиці</h2>
+  <table>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+    </tr>
+    <tr>
+      <td>Peter</td>
+      <td>Griffin</td>
+    </tr>
+    <tr>
+      <td>Lois</td>
+      <td>Griffin</td>
+    </tr>
+  </table>
+  
+  <h3>Виділення рядків таблиці при наведенні.</h3>
+  <table class="hover-table">
+    <tr>
+      <th>Ім'я</th>
+      <th>Прізвище</th>
+      <th>Баланс</th>
+    </tr>
+    <tr>
+      <td>Пітер</td>
+      <td>Гріффін</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>Лоїс</td>
+      <td>Гріффін</td>
+      <td>$150</td>
+    </tr>
+    <tr>
+      <td>Джо</td>
+      <td>Свансон</td>
+      <td>$300</td>
+    </tr>
+    <tr>
+      <td>Клівленд</td>
+      <td>Браун</td>
+      <td>$250</td>
+    </tr>
+  </table>
+  
+  <h3>Полосата таблиця.</h3>
+  <table class="zebra-table">
+    <tr>
+      <th>Ім'я</th>
+      <th>Прізвище</th>
+      <th>Баланс</th>
+    </tr>
+    <tr>
+      <td>Пітер</td>
+      <td>Гріффін</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>Лоїс</td>
+      <td>Гріффін</td>
+      <td>$150</td>
+    </tr>
+    <tr>
+      <td>Джо</td>
+      <td>Свансон</td>
+      <td>$300</td>
+    </tr>
+    <tr>
+      <td>Клівленд</td>
+      <td>Браун</td>
+      <td>$250</td>
+    </tr>
+  </table>
+  
+  <h3>Таблиця з кольоровим заголовком.</h3>
+  <table class="colored-header-table">
+    <tr>
+      <th>Ім'я</th>
+      <th>Прізвище</th>
+      <th>Доходи</th>
+    </tr>
+    <tr>
+      <td>Пітер</td>
+      <td>Гріффін</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>Лоїс</td>
+      <td>Гріффін</td>
+      <td>$150</td>
+    </tr>
+    <tr>
+      <td>Джо</td>
+      <td>Свансон</td>
+      <td>$300</td>
+    </tr>
+    <tr>
+      <td>Клівленд</td>
+      <td>Браун</td>
+      <td>$250</td>
+    </tr>
+  </table>
+
+  <h3>Адаптивність таблиці.</h3>
+  <div class="table-container">
+    <table class="responsive-table">
+      <tr>
+        <th>Ім'я</th>
+        <th>Прізвище</th>
+        <th>Баланс</th>
+        <th>Баланс</th>
+        <th>Баланс</th>
+        <th>Баланс</th>
+        <th>Баланс</th>
+        <th>Баланс</th>
+        <th>Баланс</th>
+        <th>Баланс</th>
+        <th>Баланс</th>
+        <th>Баланс</th>
+      </tr>
+      <tr>
+        <td>Джилл</td>
+        <td>Сміт</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Ів</td>
+        <td>Джексон</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>Адам</td>
+        <td>Джонсон</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+      </tr>
+    </table>
+  </div>
+
+  <h2>CSS ПРОСУНУТИЙ</h2>
+  <h2>CSS Закруглені кути</h2>
+  <h3>Властивість border-radius.</h3>
+  <p>Rounded corners for an element with a specified background color:</p>
+  <p id="rcorners1">Rounded corners!</p>
+  <p>Rounded corners for an element with a border:</p>
+  <p id="rcorners2">Rounded corners!</p>
+  <p>Rounded corners for an element with a background image:</p>
+  <p id="rcorners3">Rounded corners!</p>
+  <p>Чотири значення - border-radius: 15px 50px 30px 5px:</p>
+  <p id="rcorners4"></p>
+  <p>Три значення - border-radius: 15px 50px 30px:</p>
+  <p id="rcorners5"></p>
+  <p>Два значення - border-radius: 15px 50px:</p>
+  <p id="rcorners6"></p>
+  <p>Одне значення - border-radius: 15px:</p>
+  <p id="rcorners7"></p>
+  <p>Еліптична межа - border-radius: 50px / 15px:</p>
+  <p id="rcorners8"></p>
+  <p>Еліптична межа - border-radius: 15px / 50px:</p>
+  <p id="rcorners9"></p>
+  <p>Еліптична межа - border-radius: 50%:</p>
+  <p id="rcorners10"></p>
+
+  <h2>CSS Анімації</h2>
+  <div class="anim"></div>
+
+  <h2>CSS Кнопки</h2>
+  <button class="button">Зелена</button>
+  <button class="button button2">Синя</button>
+  <button class="button button3">Червона</button>
+  <button class="button button4">Сіра</button>
+  <button class="button button5">Чорна</button>
+  <button class="button button6">Рамка</button>
+
+  <h2>CSS Пагінація</h2>
+  <div class="center">
+    <div class="pagination">
+    <a href="#">«</a>
+    <a href="#">1</a>
+    <a href="#" class="active">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">»</a>
+    </div>
+  </div>
+
+<h2>CSS Створення стовпців</h2>
+<div class="newspaper">
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+  </div>
+
+<h2>CSS Випадалючі списки</h2>
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+  <a href="#">Ссылка 1</a>
+  <a href="#">Ссылка 2</a>
+  <a href="#">Ссылка 3</a>
+  </div>
+</div>
+
+<h2>CSS Тіні</h2>
+<p>"Самостійна робота №2" (як h1) тепер у стилі з обведенням.</p>
+
+<h2>CSS Box Shadow</h2>
+<div class="shadowbox">A div element with a blurred, lightblue box-shadow, with a spread radius of 12px.</div>
+
+<h2>CSS Переходи</h2>
+<div class="pere"></div>
+
+<h2>CSS Текстові ефекти</h2>
+<p class="test1">Some text with default writing-mode.</p>
+
+<p>Some text with a span element with a <span class="test2">vertical-rl</span> writing-mode.</p>
+
+<p class="test2">Some text with writing-mode: vertical-rl.</p>
+
+</body>
+
+<footer>
+<p>Кінець.</p>
+</footer>
+
+</html>
